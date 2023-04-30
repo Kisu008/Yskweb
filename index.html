@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Website for Yuzusk</title>
+  <style>
+    .intro {
+      text-align: center;
+      position: relative;
+    }
+
+    .title {
+      font-size: 5rem;
+      font-weight: bold;
+      margin-top: 8rem;
+      opacity: 0;
+      animation: fade-in 2s forwards;
+    }
+
+    .description {
+      font-size: 1.5rem;
+      opacity: 0;
+      animation: slide-in 2s forwards;
+    }
+
+    .btn {
+      font-size: 1.5rem;
+      background-color: #FFA500;
+      color: #fff;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 2rem;
+      opacity: 0;
+      animation: slide-in 2s forwards;
+      margin-top: 3rem;
+    }
+
+    .footer {
+      margin-top: 5rem;
+      font-size: 1.2rem;
+      color: #777;
+    }
+
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slide-in {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="intro">
+    <h1 class="title">Yuzusk's Website</h1>
+    <p class="description">I am currently working hard to bring you a better online experience. I am designing and developing new features, improving navigation, and creating fresh content to make your visit with me more enjoyable and informative. 
+      <br>Thank you for your support and for visiting my website!</p>
+    <button class="btn">Learn More</button>
+  </div>
+
+  <div class="footer">
+    &copy; 2023 Yuzusk's Website. All rights reserved.
+  </div>
+
+  <script>
+    const title = document.querySelector(".title");
+    const description = document.querySelector(".description");
+    const btn = document.querySelector(".btn");
+
+    btn.addEventListener("click", () => {
+      // to take user to another page
+    });
+
+    // delay animations until page has loaded
+    window.onload = () => {
+      setTimeout(() => {
+        title.style.opacity = "1";
+        description.style.opacity = "1";
+        btn.style.opacity = "1";
+      }, 1000);
+    };
+  </script>
+</body>
+</html>
